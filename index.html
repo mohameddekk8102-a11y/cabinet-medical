@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabinet Médical Dr Glele & Dr Pertus</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN for rapid prototyping/continuity) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: '#4F46E5', // Indigo 600
+                50: '#EEF2FF',
+                100: '#E0E7FF',
+                600: '#4F46E5',
+                700: '#4338CA',
+                900: '#312E81',
+              },
+              secondary: {
+                DEFAULT: '#7C3AED', // Violet 600
+                600: '#7C3AED',
+                900: '#4C1D95',
+              },
+              slate: {
+                50: '#F8FAFC',
+                500: '#64748B',
+                900: '#0F172A',
+              }
+            },
+            boxShadow: {
+              'colored': '0 4px 20px -2px rgba(79, 70, 229, 0.1)',
+            },
+            letterSpacing: {
+              tight: '-0.025em',
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-slate-50 text-slate-500 font-sans antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          @apply text-slate-900 font-extrabold tracking-tight;
+        }
+      }
+      /* Custom utilities for smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@emailjs/browser": "https://esm.sh/@emailjs/browser@^4.4.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
