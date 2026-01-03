@@ -18,7 +18,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isOpenNow, setIsOpenNow] = useState(true); // Mock logic for demo
+  const [isOpenNow] = useState(true); // Mock logic for demo
 
   useEffect(() => {
     const handleScroll = () => {
